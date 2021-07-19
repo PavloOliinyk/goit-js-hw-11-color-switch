@@ -4,6 +4,7 @@ let timerId = null;
 
 const startBtn = document.querySelector('[data-action="start"]');
 const stopBtn = document.querySelector('[data-action="stop"]');
+
 stopBtn.disabled = true;
 
 const randomIntegerFromInterval = (min, max) => {
@@ -21,7 +22,7 @@ function onStartChangeBodyColor(event) {
   timerId = setInterval(changeBodyColor, 1000);
 }
 
-function onStopClick(event) {
+function onStopChangeBodyColor(event) {
   event.target.disabled = true;
   startBtn.disabled = false;
 
@@ -31,4 +32,4 @@ function onStopClick(event) {
 }
 
 startBtn.addEventListener('click', onStartChangeBodyColor);
-stopBtn.addEventListener('click', onStopClick);
+stopBtn.addEventListener('click', onStopChangeBodyColor);
