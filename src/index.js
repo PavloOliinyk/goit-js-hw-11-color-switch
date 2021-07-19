@@ -25,7 +25,7 @@ function onStopClick(event) {
   event.target.disabled = true;
   startBtn.disabled = false;
 
-  document.body.style.backgroundColor = 'white';
+  document.body.style.backgroundColor = '#FFFFFF';
 
   clearInterval(timerId);
 }
